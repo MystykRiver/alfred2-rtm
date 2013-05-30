@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>net.bminus.alfred.rtm</string>
+	<key>connections</key>
+	<dict>
+		<key>338E8CCC-DCDA-4081-9A69-F741426594E7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DD6CB1FF-263D-47BD-B44C-FD9224B65BD9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>338E8CCC-DCDA-4081-9A69-F741426594E7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Chad Kopca</string>
+	<key>description</key>
+	<string>Interface from Alfred to Milkmaid to Remember The Milk</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Remember The Milk</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Remember The Milk</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>DD6CB1FF-263D-47BD-B44C-FD9224B65BD9</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>script</key>
+				<string>python controller.py {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>338E8CCC-DCDA-4081-9A69-F741426594E7</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>keyword</key>
+				<string>rtm</string>
+				<key>runningsubtext</key>
+				<string>Fetching Data...</string>
+				<key>script</key>
+				<string>python controller.py {query}</string>
+				<key>title</key>
+				<string>Remember The Milk</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</string>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Type rtm to traverse through your lists and tasks
+Type rtm add to quickly add a task using RTM smart notation
+
+This workflow requires milkmaid to be installed and authorized
+http://rubygems.org/gems/milkmaid
+
+Thanks to Marius Grigoriu for milkmaid</string>
+	<key>uidata</key>
+	<dict>
+		<key>338E8CCC-DCDA-4081-9A69-F741426594E7</key>
+		<dict>
+			<key>ypos</key>
+			<real>170</real>
+		</dict>
+		<key>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</key>
+		<dict>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+		<key>DD6CB1FF-263D-47BD-B44C-FD9224B65BD9</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
